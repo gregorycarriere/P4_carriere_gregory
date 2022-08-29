@@ -67,36 +67,6 @@ img {
 .topnav .icon {
   display: none;
   color: #ff0000;
-}
-
-@media screen and (max-width: 768px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
 } 
 
 main {
@@ -222,7 +192,7 @@ input {
 }
 .formData[data-error]::after {
   content: attr(data-error);
-  font-size: 0.4em;
+  font-size: 0.6em;
   color: #e54858;
   display: block;
   margin-top: 7px;
@@ -241,7 +211,7 @@ input {
 
 input[data-error]::after {
     content: attr(data-error);
-    font-size: 0.4em;
+    font-size: 0.6em;
     color: red;
 }
 .checkbox-label,
@@ -433,8 +403,7 @@ input[data-error]::after {
   position: relative;
   text-align: left;
   width: 424px;
-  min-width: 360px;
-  max-height: 724px;
+  max-height: 698px;
 }
 .hero-content::after {
   content: "";
@@ -444,8 +413,7 @@ input[data-error]::after {
   position: absolute;
   right: -80px;
   top: 0;
-  min-width: 360px;
-  max-height: 724px;
+  max-height: 698px;
 }
 
 .hero-content > * {
@@ -456,7 +424,7 @@ input[data-error]::after {
   font-size: 6rem;
   font-weight: normal;
   white-space: nowrap;
-  text-overflow: clip;
+  margin-right: auto;
 }
 .hero-text {
   width: 146%;
@@ -480,7 +448,7 @@ input[data-error]::after {
   width: 100%;
   display: block;
   padding: 0;
-  object-fit: contain;
+  object-fit: fill;
   height: 100%;
   
   
@@ -501,6 +469,36 @@ footer {
   margin: 0 20px;
 }
 @media screen and (max-width: 800px) {
+
+  .topnav a {display: none;}
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-logo{
+    width: 70%;
+    margin: 5px;
+    padding: 8px;
+  }
+
   .hero-section {
     display: block;
     box-shadow: unset;
@@ -508,7 +506,8 @@ footer {
   .hero-content {
     background: #fff;
     color: #000;
-    padding: 20px;
+    padding: 0;
+    width: fit-content;
   }
   .hero-content::after {
     content: unset;
@@ -518,16 +517,24 @@ footer {
   }
   .hero-headline {
     font-size: 4.5rem;
+    width: auto;
     white-space: normal;
   }
   .hero-text {
     width: unset;
     font-size: 1.5rem;
   }
+  .hero-img{
+    margin-left: 0;
+  }
   .hero-img img {
     border-radius: 10px;
     margin-top: 40px;
   }
+  .hero-text{
+    margin-top: 20px;
+  }
+
   .hero-section > .btn-signup {
     display: block;
     margin: 32px auto 10px;
@@ -538,6 +545,56 @@ footer {
     text-align: center;
   }
 }
+
+
+@media screen and (max-width: 540px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav{
+    margin-bottom: 0;
+  }
+
+  .header-logo{
+    width: 70%;
+    margin: 5px;
+    padding: 8px;
+  }
+
+  .header-logo img{
+    width: 200px;
+  }
+
+  .content {
+    margin: 15% auto;
+  }
+
+  .hero-section{
+    overflow: visible;
+  }
+
+  .hero-content{
+    width: 100%;
+    padding: 0;
+  }
+
+  .hero-headline{
+    font-size:2.2em;
+  }
+
+  .hero-text{
+    margin-top: 1.5em;
+    font-size: 0.85em;
+  }
+
+  .hero-img{
+    margin: 0;
+  }
+} 
+
 
 @keyframes modalopen {
   from {

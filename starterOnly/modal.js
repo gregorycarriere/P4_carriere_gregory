@@ -36,7 +36,7 @@ function closeModal() {
 }
 
 // declaration Regex
-let nameRegex = /^[A-Za-zéèïùçü\- ]{3,255}$/;
+let nameRegex = /^[A-Za-zéèïùçü\- ]{2,255}$/;
 let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 let birthdateRegex = /^([0-9]{4})+\-([0-9]{2})+\-([0-9]{2})$/;
 let nbtournamentRegex = /^[0-9]{1,2}$/;
@@ -80,7 +80,7 @@ function verifFirstName() {
     return true;
   } else{
     formData[0].setAttribute("data-error-visible",true);
-    formData[0].setAttribute("data-error","Prénom incorrect");
+    formData[0].setAttribute("data-error","Prénom incorrect, saisir 2 lettres min.");
     return false;
   }
 }
@@ -93,7 +93,7 @@ function verifLastName() {
     return true;
   } else{
     formData[1].setAttribute("data-error-visible",true);
-    formData[1].setAttribute("data-error","Nom incorrect");
+    formData[1].setAttribute("data-error","Nom incorrect, saisir 2 lettres min.");
     return false;
   }
 }
@@ -132,7 +132,7 @@ function verifNbTournament() {
     return true;
   } else{
     formData[4].setAttribute("data-error-visible",true);
-    formData[4].setAttribute("data-error","Nombre incorrect");
+    formData[4].setAttribute("data-error","Nombre incorrect, choisir entre 0 et 99");
     return false;
   }
 }
