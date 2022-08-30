@@ -182,6 +182,7 @@ function changeForm() {
 function resetModal() {
   modalForm.style.display = "block";
   closingModal.style.display = "none";
+  modalForm.reset();
 }
 
 function changeModal() {
